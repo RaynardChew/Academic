@@ -116,6 +116,7 @@ header nav ul li a{
   display: grid; 
   grid-template-columns: repeat(4,max-content);
   gap: 2rem; 
+ 
 }
 
 .dropdown-menu-header{ 
@@ -239,6 +240,7 @@ margin: 2rem 0;
   display: grid; 
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem; 
+  min-width: 100%; 
   
 
 }
@@ -277,5 +279,12 @@ footer{
   left:0; 
 }
 
+footer > a{ 
+  margin-left: 1rem; 
+}
+
+footer > a:hover{ 
+  margin-left: 1rem; 
+}
 
 
