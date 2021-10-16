@@ -30,7 +30,6 @@ document.addEventListener('click', (event) => {
 
 // set the clock 
 
-
 window.onload = () =>{   
     
     setInterval(displayTimeAndDate, 1000);
@@ -58,7 +57,7 @@ function displayTimeAndDate()
 
     });
 
-    var date = dateandtime.toLocaleDateString(undefined,
+    var date = dateandtime.toLocaleDateString('en-GB',
         {
             year: 'numeric',
             month:'2-digit',
@@ -112,49 +111,10 @@ function displayTimeAndDate()
             }
         
             document.getElementById('time').innerHTML = time;
-            document.getElementById('date').innerHTML = date + '\xa0\xa0\xa0\xa0\xa0' + '(' + actualday +')' ;
-        }
-
-       /*  function datetimecheck() 
-        { 
-            var hournow = document.getElementById('time').innerHTML.substr(0,2); 
-            var minutenow = document.getElementById('time').innerHTML.substr(3,2); 
-            var AMPM = document.getElementById('time').innerHTML.substr(9,2); 
-            var daynow = document.getElementById('date').innerHTML.substr(9,2)
-            
-            var getchceckingelement = document.getElementById('fortextpaste').innerHTML;
-
-            if ( daynow == getchceckingelement.substr(0,3) && hournow == getchceckingelement.substr(4,2)  && minutenow == getchceckingelement.substr(7,2) && AMPM == getchceckingelement.substr(10,2))
-            {
-                document.getElementById('subjectonemeet').click();
-            }
-        } */
-
-   
+           document.getElementById('date').innerHTML = date + '\xa0\xa0\xa0\xa0\xa0' + '(' + actualday + ')'; 
+        }  
     
-}
-
-// dunno 
-
-class subject 
-{ 
-    constructor(time,day) // need to get day and time of lecture hour ?? 
-    {
-        this.time = time; 
-        this.day = day; 
-    }
-
-}
-
-
-function subjecttime() 
-{ 
-    var text = document.getElementById('text').value;
-    document.getElementById('fortextpaste').innerHTML = text;
-   
-}
-
-//dunno 
+};
 
 // open link in new  tab 
 
@@ -165,12 +125,9 @@ function subjecttime()
        anchor.forEach((each) => {
          each.setAttribute("target", "_blank");
      });   
-    
-
-   
-    
      
-}
+     
+};
 
 
 

@@ -3,7 +3,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
 
-:root{ 
+
+  :root{ 
   --dark: #183a1d; 
   --light: #fefbe9; 
   --apple: #e1eedd; 
@@ -51,6 +52,15 @@ a:hover{
 .header > h3{ 
   font-family: 'Kaushan Script', cursive;
   font-size: 2rem; 
+}
+
+.header > h3 > a{ 
+  text-decoration: none; 
+  color: inherit;
+}
+
+.header > h3 > a:hover{ 
+  color:none;
 }
 
 .header nav ul { 
@@ -116,7 +126,6 @@ header nav ul li a{
   display: grid; 
   grid-template-columns: repeat(4,max-content);
   gap: 2rem; 
- 
 }
 
 .dropdown-menu-header{ 
@@ -152,9 +161,10 @@ margin: 2rem 0;
   gap: 1rem; 
   border-radius: 1rem;
   box-shadow: 2px 5px 5px 0 var(--dark)
-}
+} 
 
-.leftside-bar > .leftside-bar-clock { 
+
+ .leftside-bar > .leftside-bar-clock { 
   font-family: 'Orbitron', sans-serif;
   display:flex; 
   flex-direction: column; 
@@ -164,7 +174,7 @@ margin: 2rem 0;
   width: 90%; 
   gap: 1rem;
   border-radius: .3rem; 
-}
+} 
 
 .leftside-bar > .leftside-bar-clock > .time{
     font-size: 2rem; 
@@ -184,22 +194,30 @@ margin: 2rem 0;
 .leftside-bar > .leftside-bar-information > header{ 
   font-size: 1.3rem;
   font-weight: bolder;
- 
   margin-bottom: 1rem; 
 }
 
+
 .leftside-bar > .leftside-bar-information > .test-subject{ 
   border-bottom: 2px dotted black;
+}
+
+.leftside-bar > .leftside-bar-information > .test-subject > p{ 
+  margin: 1rem 0;
 }
 
 .timetable> img{ 
   max-width: 100%; 
   max-height: 100%; 
   border-radius: .3rem; 
+  box-shadow: 5px 5px 10px 0 rgba(0,0,0, .25); 
 }
 
 .timetable{ 
-  box-shadow: 5px 5px 10px 0 rgba(0,0,0, .25); 
+  
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center;
 }
 
 /* class resource */ 
@@ -226,7 +244,7 @@ margin: 2rem 0;
   font-size: 1.5rem;
   position: absolute; 
   top: 2rem; 
-  left: -6rem; 
+  left: -7rem; 
   transform: rotate(-10deg);
   
 }
@@ -236,14 +254,14 @@ margin: 2rem 0;
   cursor: url(https://ani.cursors-4u.net/games/gam-16/gam1571.ani), url(https://ani.cursors-4u.net/games/gam-16/gam1571.png), auto !important;
 }
 
-.class-resource-grid{ 
+ .class-resource-grid{ 
   display: grid; 
   grid-template-columns: repeat(3, 1fr);
   gap: 1rem; 
-  min-width: 100%; 
+  min-width: 100%;
   
 
-}
+} 
 
 .class-resource-foot{
   align-self: flex-end;
@@ -257,8 +275,7 @@ margin: 2rem 0;
   text-align: center;
   background: var(--apple);
   border-radius: .3rem; 
-
-  
+  padding: 3rem 0;
 }
 
 .subject:hover{ 
@@ -280,11 +297,71 @@ footer{
 }
 
 footer > a{ 
-  margin-left: 1rem; 
+  margin-left: 1rem;
 }
 
 footer > a:hover{ 
-  margin-left: 1rem; 
+  margin-left: 1rem;
 }
+
+
+@media screen and (max-width: 1290px){ 
+
+
+  .quotes{
+    display:none;
+  }
+
+  .header{ 
+   height:200px;
+  }
+
+ 
+
+ .header nav ul{ 
+  flex-wrap:wrap; 
+ }
+
+.timetable-grid{
+  display: flex; 
+  flex-direction: column;
+  gap: 5rem; 
+}
+
+.timetable{ 
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+}
+
+}
+
+
+@media screen and (max-width: 550px){ 
+  .header{ 
+    height:500px;
+   }
+
+   .dropdown-menu{ 
+    left: 10px;
+  }
+
+  .menu-grid{
+   grid-template-columns: repeat(2,max-content);
+   grid-template-rows: repeat(2,max-content);
+  }
+}
+
+@media screen and (max-width: 400px){ 
+
+  .dropdown-menu{ 
+    left: -150px;
+    top: -5px;
+  }
+
+
+}
+
+
 
 
