@@ -129,6 +129,22 @@ function displayTimeAndDate()
      
 };
 
+// copy pw 
+
+const copy = document.getElementById('copy-btn');
+
+copy.addEventListener('click', () => {
+    const pw = document.getElementById('pw');
+    
+    const selection = window.getSelection();
+    const range = document.createRange();
+    range.selectNodeContents(pw);
+    selection.removeAllRanges();
+    selection.addRange(range);
+    //add to clipboard.
+    document.execCommand('copy');
+})
+
 
 
 
