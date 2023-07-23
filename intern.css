@@ -1,0 +1,44 @@
+.information{ 
+
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+/* information - logbook */
+
+.information .logbook-container{
+
+}
+
+.information .logbook-container >* {
+   padding: 0rem 0rem 2rem 0rem;
+
+}
+
+.information p{
+ text-align: center;
+ font-size: 2rem;
+ font-weight: bolder;
+}
+
+.information img{
+    max-width: auto; 
+    max-height: auto; 
+    border-radius: .3rem; 
+    box-shadow: 5px 5px 10px 0 rgba(0,0,0, .25); 
+}
+
+
+
+/* miscelleaneous */ 
+
+.break-line{
+background-color: gray;
+width:100%;
+height: 3px;
+line-height: 90%;
+
+}
